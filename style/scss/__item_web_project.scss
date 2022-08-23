@@ -1,0 +1,42 @@
+.item-web-project {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 32%;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    
+    cursor: pointer;
+    transition: .4s;
+    &:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    }
+    &__banner-image {
+        width: 100%;
+        aspect-ratio: 6/3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    &__title, &__description {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    &__description {
+        font-family: 'Roboto', sans-serif;
+        color: #666666;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-bottom: 36px;
+    }
+}

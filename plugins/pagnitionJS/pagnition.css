@@ -1,0 +1,132 @@
+:root {
+  --background-color-active: green;
+  --text-color-active: #fff;
+  --background-color-hover: red;
+  --text-color-hover: #fff;
+  --background-color-normal: #ccc;
+  --text-color-normal: gray;
+  --background-color-disable: transparent;
+  --text-color-disable: #ccc;
+}
+
+.pagnition-navigation .ListMovePage {
+  display: flex;
+  column-gap: 16px;
+  list-style: none;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 16px;
+}
+@media screen and (max-width: 550px) {
+  .pagnition-navigation .ListMovePage {
+    column-gap: 6px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .pagnition-navigation .ListMovePage {
+    column-gap: 3px;
+  }
+}
+.pagnition-navigation .ListMovePage .wrap-pagnition-navigate__number {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 550px) {
+  .pagnition-navigation .ListMovePage .wrap-pagnition-navigate__number {
+    column-gap: 6px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .pagnition-navigation .ListMovePage .wrap-pagnition-navigate__number {
+    column-gap: 3px;
+  }
+}
+.pagnition-navigation .ListMovePage .moveItem {
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  background-color: var(--background-color-normal);
+}
+.pagnition-navigation .ListMovePage .moveItem.active {
+  background-color: var(--background-color-active);
+  cursor: default;
+}
+.pagnition-navigation .ListMovePage .moveItem.active > a {
+  cursor: default;
+}
+.pagnition-navigation .ListMovePage .moveItem:not(.active):hover {
+  background-color: var(--background-color-hover);
+}
+.pagnition-navigation .ListMovePage .moveSymbol {
+  padding: 6px 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--text-color-normal);
+}
+.pagnition-navigation .ListMovePage .moveSymbol span {
+  color: var(--text-color-normal);
+}
+.pagnition-navigation .ListMovePage .moveSymbol path, .pagnition-navigation .ListMovePage .moveSymbol line {
+  fill: var(--text-color-normal);
+  stroke: var(--text-color-normal);
+}
+.pagnition-navigation .ListMovePage .moveSymbol.active {
+  color: var(--text-color-active);
+}
+.pagnition-navigation .ListMovePage .moveSymbol.active span {
+  color: var(--text-color-active);
+}
+.pagnition-navigation .ListMovePage .moveSymbol.active path, .pagnition-navigation .ListMovePage .moveSymbol.active line {
+  fill: var(--text-color-active);
+  stroke: var(--text-color-active);
+}
+.pagnition-navigation .ListMovePage .moveSymbol:not(.disable):hover {
+  color: var(--text-color-hover);
+}
+.pagnition-navigation .ListMovePage .moveSymbol:not(.disable):hover span {
+  color: var(--text-color-hover);
+}
+.pagnition-navigation .ListMovePage .moveSymbol:not(.disable):hover path, .pagnition-navigation .ListMovePage .moveSymbol:not(.disable):hover line {
+  fill: var(--text-color-hover);
+  stroke: var(--text-color-hover);
+}
+.pagnition-navigation .ListMovePage .moveSymbol.disable {
+  cursor: default;
+  background-color: var(--background-color-disable) !important;
+  color: var(--text-color-disable) !important;
+}
+.pagnition-navigation .ListMovePage .moveSymbol.disable span {
+  color: var(--text-color-disable) !important;
+}
+.pagnition-navigation .ListMovePage .moveSymbol.disable path, .pagnition-navigation .ListMovePage .moveSymbol.disable line {
+  fill: var(--text-color-disable) !important;
+  stroke: var(--text-color-disable) !important;
+}
+.pagnition-navigation .ListMovePage .moveNumber {
+  padding: 6px 15px;
+}
+.pagnition-navigation .ListMovePage .moveNumber a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--text-color-normal);
+}
+.pagnition-navigation .ListMovePage .moveNumber.active a {
+  color: var(--text-color-active);
+}
+.pagnition-navigation .ListMovePage .moveNumber:hover a {
+  color: var(--text-color-hover);
+}
+
+/*# sourceMappingURL=pagnition.css.map */

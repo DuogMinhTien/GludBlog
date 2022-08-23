@@ -1,0 +1,99 @@
+@import "./_item_web_project";
+
+section {
+    height: 100%;
+    display: flex;
+    position: relative;
+    .menu-navigation {
+        padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #F0F0F0;
+            flex: 1;
+            width: max-content;
+            row-gap: 16px;
+            transition: .6s;
+            border-right: 1px solid #ccc;
+            position: fixed;
+            left: 0;
+            top: var(--top-menu);
+            z-index: 100;
+            height: 100vh;
+        &.active {
+            z-index: 120;
+        }
+            .item-navigation {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: .6s;
+                text-decoration: none;
+                width: max-content;
+                &.active {
+                    .item-navigation__icon, .item-navigation__text {
+                        background: -webkit-linear-gradient(#7DF405, #2EA933);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+                &__icon, &__text {
+                    color: #000;
+                }
+                &__icon {
+                    font-size: 3rem;
+                    margin-bottom: 4px;
+                }
+                &__text {
+                    font-size: 1rem;
+                    font-family: Arial, Helvetica, sans-serif;
+                    cursor: pointer;
+                    display: none;
+                    transition: .6s;
+                    animation: zoomInText .6s;
+                    &.hideText {
+                        animation: zoomOutText .6s;
+                    }
+                    @keyframes zoomInText {
+                        from {
+                            transform: scale(0);
+                        }
+                        to {
+                            transform: scale(1);
+                        }
+                    }
+                    @keyframes zoomOutText {
+                        from {
+                            transform: scale(1);
+                        }
+                        to {
+                            transform: scale(0);
+                        }
+                    }
+                }
+                &:hover {
+                    opacity: .8;
+                }
+            }
+    }
+    #pagnition-project-web {
+        margin-left: 65px;
+        .project-collection {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 2%;
+            row-gap: 32px;
+        }
+        .pagnition-navigation {
+            margin-top: 15px;
+            zoom: .8;
+        }
+        padding-bottom: 35px;
+    }
+
+}
