@@ -15,10 +15,17 @@ $("#close-search-icon").click (function() {
     $("#close-search-icon").css ("display", "none");
 })
 //HEADER//
-
+let openMenu = false;
 $J(".menu-icon").onclick = () => {
     $J("#menu-icon").classList.toggle ("animation-menu-icon");
     $J(".menu-navigation").classList.toggle ("active");
+    if (openMenu) {
+        $("body").css ("overflow", "auto");
+    }
+    else {
+        $("body").css ("overflow", "hidden");
+    }
+    openMenu = !openMenu;
     $$("section .menu-navigation .item-navigation .item-navigation__text").forEach (item => {
         if (item.style.display == "block") {
             item.classList.add ("hideText");
